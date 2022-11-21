@@ -8,14 +8,13 @@ import path from 'path';
 import { useRouter } from 'next/router';
 import { Stack } from '@mui/material';
 
-export default function Post({fileStructure, file}) {
+export default function Post({fileStructure, file, title}) {
 
   const router = useRouter();
-
-  const ipynb = file;
   let ipynbCells = file.cells;
   const [cells, setCells] = useState([]);
   const PlotGraph = dynamic(import('src/components/PlotGraph'),{ssr: false});
+  const fileName = router.query.slug[router.query.slug.length]
 
   const categorizeTypes = async () => {
     let arr = [];
@@ -51,9 +50,9 @@ export default function Post({fileStructure, file}) {
   return (
     <div>
       <Head>
-        <title>Fairlabs Enlight</title>
+        <title>{title}</title>
         <meta name="description" content="Fairlabs Enlight" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/fairlabs_icon.svg" />
       </Head>
 
       <main>
@@ -136,11 +135,13 @@ export const getStaticProps = async ({ params }) => {
   const fileStructure = makeFileStructure(root, []);
   const jsonFile = params.slug.join('/');
   const file = fs.readFileSync(`src/contents/${jsonFile}`);
+  const title = params.slug[params.slug.length -1].split('.json')[0];
 
   return {
     props: {
       fileStructure: fileStructure,
       file: JSON.parse(file),
+      title: title,
     },
   };
 };

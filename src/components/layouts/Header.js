@@ -4,6 +4,7 @@ import { Stack, Typography } from '@mui/material';
 import Link from 'next/link';
 
 export const Header = ({ children }) => {
+  
   return (
     <Stack 
       sx={{
