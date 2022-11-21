@@ -42,7 +42,7 @@ export default function Home({fileStructure}) {
       <Head>
         <title>Fairlabs Enlight</title>
         <meta name="description" content="Fairlabs Enlight" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/fairlabs_icon.svg" />
       </Head>
 
       <main>
