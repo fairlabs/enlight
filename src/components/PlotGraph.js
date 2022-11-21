@@ -5,10 +5,6 @@ export const PlotGraph = ({data, layout}) => {
     <Plot
       data={data}
       layout={layout}
-      // frames={this.state.frames}
-      // config={this.state.config}
-      // onInitialized={(figure) => this.setState(figure)}
-      // onUpdate={(figure) => this.setState(figure)}
     />
   )
 };
