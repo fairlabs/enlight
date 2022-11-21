@@ -29,10 +29,10 @@ jobs:
     - run: npm ci
     - run: npm run build
       env:
-        NEXT_PUBLIC_BASE_PATH: 'https://enlight.fairlabs.io/'
+        NEXT_PUBLIC_BASE_PATH: '/enlight.fairlabs.io/'
     - run: npm run export
       env:
-        NEXT_PUBLIC_BASE_PATH: 'https://enlight.fairlabs.io/'
+        NEXT_PUBLIC_BASE_PATH: '/enlight.fairlabs.io/'
     - run: touch ./out/.nojekyll
     
     - name: Deploy 🚀
