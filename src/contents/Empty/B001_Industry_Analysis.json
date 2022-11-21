@@ -2,13 +2,12 @@
  "cells": [
   {
    "cell_type": "code",
-   "execution_count": 32,
+   "execution_count": 37,
    "metadata": {
     "ExecuteTime": {
-     "end_time": "2022-11-18T07:53:41.682545Z",
-     "start_time": "2022-11-18T07:53:41.342479Z"
-    },
-    "id": "Sl79j1hCeni5"
+     "end_time": "2022-11-21T06:36:19.292083Z",
+     "start_time": "2022-11-21T06:36:18.679548Z"
+    }
    },
    "outputs": [
     {
@@ -51,11 +50,7 @@
    "source": [
     "%run '/Volumes/GoogleDrive/공유 드라이브/FAIRLABS_BLOG/Code/ESG_Visualization_v1.ipynb'\n",
     "from IPython.core.display import display, HTML\n",
-    "display(HTML(\"<style>.container { width:90% !important; }</style>\"))\n",
-    "\n",
-    "# Call Data\n",
-    "bulk_data = pd.read_csv('/Volumes/GoogleDrive/공유 드라이브/FAIRLABS_BLOG/Data/entire_industry_20151231_20221117.csv',index_col=0)\n",
-    "bulk_data = bulk_data[bulk_data.index !=2015]"
+    "display(HTML(\"<style>.container { width:90% !important; }</style>\"))"
    ]
   },
   {
@@ -63,9 +58,9 @@
    "metadata": {},
    "source": [
     "# 산업별 ESG Exposure 비중 비교\n",
-    "- 하드웨어 산업과 자동차 산업의 데이터를 2016년 1월 1일 부터 2022년 11월 27일 총 7년치 데이터를 분석\n",
-    "- 분홍색의 데이터는 Data Driven Materiality 연보라색의 데이터는 SASB Driven Materiality로 그 비중을 비교한 것임\n",
-    "- Data Driven Materiality 데이터의 경우 각 산업별 노출도 상위 10 분야를 채택했음"
+    "- **Hardware 산업군**과 **Automobiles 산업군**의 데이터를 2016년 1월 1일 부터 2022년 11월 17일 까지 약 7년치 데이터를 분석함\n",
+    "- 분홍색의 데이터는 **Data Driven Materiality 기준**, 연보라색의 데이터는 **SASB Driven Materiality 기준**으로 채택한 카테고리로, 그 비중을 비교한 것임\n",
+    "- **Data Driven Materiality 기준** 데이터는 각 산업별 ESG Exposure 상위 10 분야를 채택"
    ]
   },
   {
@@ -364,10 +359,21 @@
    "metadata": {},
    "source": [
     "## 세부 내용\n",
-    "- 하드웨어 산업과 자동차 산업 공통적으로 **Competitive Behavior, Product Quality & Safety, Management of the Legal & Regulatory Environment,Product Design & Lifecycle Management** 카테고리가 같은 양상으로 나타남\n",
-    "- 반변에 SASB Driven Materiality 기준으로 채택된 카테고리는 Data Driven Materiality 기준으로 채택된 카테고리와 아주 다른 양상을 보임\n",
-    "- 자동차 산업에서는 품질 관련 이슈가, \n",
+    "- **Hardware 산업군**과 **Automobiles 산업군** 공통적으로 *Competitive Behavior, Product Quality & Safety, Management of the Legal & Regulatory Environment,Product Design & Lifecycle Management* 카테고리가 같은 양상으로 나타남\n",
+    "- 반면에 **SASB Driven Materiality 기준**으로 채택된 카테고리는 **Data Driven Materiality 기준**으로 채택된 카테고리와 **<span style=\"color:red\">다른 양상</span>**을 보임\n",
+    "- **Automobiles 산업군**에서는 *Product Quality & Safety* 이슈가, **Hardware 산업군**에서는 *Product Design & Lifecycle Management* 관리 및 디자인 영역이 가장 높은 비율을 차지하고 있음\n",
     "\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "# 하드웨어 산업군 연도별 ESG Exposure (2022년도 기준 Top5)\n",
+    "- *Competitive Behavior* 카테고리는 매년 가장 많은 노출도를 차지하지만 그 **<span style=\"color:red\">비율이 줄고있음</span>**\n",
+    "- *Management of the Legal & Regulatory Environment, Energy Management* 비율은 **<span style=\"color:red\">증가하는 추세</span>**\n",
+    "- *Product Design & Lifecycle Management, Product Quality & Safety* 비율은 **<span style=\"color:red\">줄어드는 추세</span>**\n",
+    "- **이는 데이터의 중요성이 대두되면서 각각의 산업군에서도 데이터 보안의 중요성이 커지고 있다는 점을 시사**\n"
    ]
   },
   {
@@ -1703,12 +1709,23 @@
    ]
   },
   {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "# Data Security 카테고리 연도별 ESG Exposure (2022년도 기준 Top5)\n",
+    "- **Telecomunication Services 산업군**은 매년 가장 큰 비중을 차지하지만 **Hardware 산업군**과의 **<span style = \"color:red\">비율 차이가 줄어들고 있음</span>**\n",
+    "- **Internet Media & Services, Software & IT Services 산업군**의 비율은 **<span style = \"color:red\">상승하는 추세</span>**\n",
+    "- **Commercial Banks 산업군**은 매년 3퍼센트 미만으로 **<span style = \"color:red\">작은 비율을 차지함</span>**\n",
+    "\n"
+   ]
+  },
+  {
    "cell_type": "code",
-   "execution_count": 30,
+   "execution_count": 38,
    "metadata": {
     "ExecuteTime": {
-     "end_time": "2022-11-18T07:43:19.128288Z",
-     "start_time": "2022-11-18T07:43:19.059530Z"
+     "end_time": "2022-11-21T06:36:21.456141Z",
+     "start_time": "2022-11-21T06:36:21.389272Z"
     }
    },
    "outputs": [
@@ -1720,6 +1737,30 @@
        },
        "data": [
         {
+         "name": "Telecommunication Services",
+         "type": "scatter",
+         "x": [
+          2016,
+          2017,
+          2018,
+          2019,
+          2020,
+          2021,
+          2022
+         ],
+         "xaxis": "x",
+         "y": [
+          40.47,
+          37.77,
+          44.63,
+          39.45,
+          36.58,
+          35.21,
+          34.26
+         ],
+         "yaxis": "y"
+        },
+        {
          "name": "Hardware",
          "type": "scatter",
          "x": [
@@ -1733,85 +1774,13 @@
          ],
          "xaxis": "x",
          "y": [
-          19.71,
-          17.99,
-          15.42,
-          18.08,
-          16.23,
-          18.83,
-          19.17
-         ],
-         "yaxis": "y"
-        },
-        {
-         "name": "Industrial Machinery & Goods",
-         "type": "scatter",
-         "x": [
-          2016,
-          2017,
-          2018,
-          2019,
-          2020,
-          2021,
-          2022
-         ],
-         "xaxis": "x",
-         "y": [
-          11.75,
-          6.94,
-          5.06,
-          7.05,
-          4.91,
-          5.04,
-          6.46
-         ],
-         "yaxis": "y"
-        },
-        {
-         "name": "Investment Banking & Brokerage",
-         "type": "scatter",
-         "x": [
-          2016,
-          2017,
-          2018,
-          2019,
-          2020,
-          2021,
-          2022
-         ],
-         "xaxis": "x",
-         "y": [
-          4.72,
-          5,
-          6.64,
-          4.98,
-          4.92,
-          5.32,
-          6.44
-         ],
-         "yaxis": "y"
-        },
-        {
-         "name": "Iron & Steel Producers",
-         "type": "scatter",
-         "x": [
-          2016,
-          2017,
-          2018,
-          2019,
-          2020,
-          2021,
-          2022
-         ],
-         "xaxis": "x",
-         "y": [
-          4.7,
-          3.29,
-          3.4,
-          3.19,
-          3.81,
-          4.05,
-          5.76
+          32.54,
+          28.31,
+          23.51,
+          23.55,
+          19.94,
+          21.58,
+          24.93
          ],
          "yaxis": "y"
         },
@@ -1829,15 +1798,87 @@
          ],
          "xaxis": "x",
          "y": [
-          2.79,
-          2.41,
-          3.16,
-          2.56,
-          3.52,
-          7.13,
-          5.71
+          6.53,
+          9.21,
+          8.91,
+          8.49,
+          15.23,
+          11.87,
+          14.85
          ],
          "yaxis": "y"
+        },
+        {
+         "name": "Software & IT Services",
+         "type": "scatter",
+         "x": [
+          2016,
+          2017,
+          2018,
+          2019,
+          2020,
+          2021,
+          2022
+         ],
+         "xaxis": "x",
+         "y": [
+          9.19,
+          8.61,
+          8.95,
+          11.84,
+          12.07,
+          10.19,
+          10.32
+         ],
+         "yaxis": "y"
+        },
+        {
+         "name": "Commercial Banks",
+         "type": "scatter",
+         "x": [
+          2016,
+          2017,
+          2018,
+          2019,
+          2020,
+          2021,
+          2022
+         ],
+         "xaxis": "x",
+         "y": [
+          1.58,
+          1.95,
+          1.94,
+          2.61,
+          1.74,
+          2.27,
+          1.75
+         ],
+         "yaxis": "y"
+        },
+        {
+         "name": "Telecommunication Services",
+         "type": "bar",
+         "x": [
+          2016,
+          2017,
+          2018,
+          2019,
+          2020,
+          2021,
+          2022
+         ],
+         "xaxis": "x2",
+         "y": [
+          992.17,
+          1202.13,
+          1779.27,
+          1804.1,
+          1778.53,
+          1513.69,
+          1598.69
+         ],
+         "yaxis": "y2"
         },
         {
          "name": "Hardware",
@@ -1853,85 +1894,13 @@
          ],
          "xaxis": "x2",
          "y": [
-          1855.04,
-          2307.45,
-          2021.79,
-          2902.02,
-          3533.28,
-          3123.19,
-          3210.79
-         ],
-         "yaxis": "y2"
-        },
-        {
-         "name": "Industrial Machinery & Goods",
-         "type": "bar",
-         "x": [
-          2016,
-          2017,
-          2018,
-          2019,
-          2020,
-          2021,
-          2022
-         ],
-         "xaxis": "x2",
-         "y": [
-          1105.85,
-          890.23,
-          663.84,
-          1130.66,
-          1069.52,
-          835.97,
-          1082.61
-         ],
-         "yaxis": "y2"
-        },
-        {
-         "name": "Investment Banking & Brokerage",
-         "type": "bar",
-         "x": [
-          2016,
-          2017,
-          2018,
-          2019,
-          2020,
-          2021,
-          2022
-         ],
-         "xaxis": "x2",
-         "y": [
-          444.46,
-          640.99,
-          871.13,
-          798.83,
-          1070.33,
-          883.27,
-          1077.99
-         ],
-         "yaxis": "y2"
-        },
-        {
-         "name": "Iron & Steel Producers",
-         "type": "bar",
-         "x": [
-          2016,
-          2017,
-          2018,
-          2019,
-          2020,
-          2021,
-          2022
-         ],
-         "xaxis": "x2",
-         "y": [
-          442.15,
-          421.41,
-          445.8,
-          511.6,
-          830.11,
-          671.21,
-          965.21
+          797.67,
+          901.04,
+          937.06,
+          1076.83,
+          969.6,
+          927.89,
+          1163.06
          ],
          "yaxis": "y2"
         },
@@ -1949,13 +1918,61 @@
          ],
          "xaxis": "x2",
          "y": [
-          262.79,
-          308.89,
-          414.63,
-          410.32,
-          765.55,
-          1182.31,
-          956.31
+          160.05,
+          292.99,
+          355.2,
+          388.02,
+          740.28,
+          510.51,
+          692.77
+         ],
+         "yaxis": "y2"
+        },
+        {
+         "name": "Software & IT Services",
+         "type": "bar",
+         "x": [
+          2016,
+          2017,
+          2018,
+          2019,
+          2020,
+          2021,
+          2022
+         ],
+         "xaxis": "x2",
+         "y": [
+          225.34,
+          274.06,
+          356.64,
+          541.55,
+          586.9,
+          437.92,
+          481.74
+         ],
+         "yaxis": "y2"
+        },
+        {
+         "name": "Commercial Banks",
+         "type": "bar",
+         "x": [
+          2016,
+          2017,
+          2018,
+          2019,
+          2020,
+          2021,
+          2022
+         ],
+         "xaxis": "x2",
+         "y": [
+          38.84,
+          62.21,
+          77.14,
+          119.15,
+          84.37,
+          97.39,
+          81.81
          ],
          "yaxis": "y2"
         }
@@ -2791,7 +2808,7 @@
          }
         },
         "title": {
-         "text": "<b>Supply Chain Management<br>Yearly ESG Exposure<b>"
+         "text": "<b>Data Security<br>Yearly ESG Exposure<b>"
         },
         "updatemenus": [
          {
@@ -2815,7 +2832,7 @@
              },
              {
               "title": {
-               "text": "<b>Supply Chain Management<br>Yearly ESG Exposure<b>"
+               "text": "<b>Data Security<br>Yearly ESG Exposure<b>"
               }
              }
             ],
@@ -2840,7 +2857,32 @@
              },
              {
               "title": {
-               "text": "<b>Hardware : Supply Chain Management<br>Yearly ESG Exposure Ratio<b>"
+               "text": "<b>Telecommunication Services : Data Security<br>Yearly ESG Exposure Ratio<b>"
+              }
+             }
+            ],
+            "label": "Telecommunication Services",
+            "method": "update"
+           },
+           {
+            "args": [
+             {
+              "visible": [
+               false,
+               true,
+               false,
+               false,
+               false,
+               false,
+               true,
+               false,
+               false,
+               false
+              ]
+             },
+             {
+              "title": {
+               "text": "<b>Hardware : Data Security<br>Yearly ESG Exposure Ratio<b>"
               }
              }
             ],
@@ -2852,31 +2894,6 @@
              {
               "visible": [
                false,
-               true,
-               false,
-               false,
-               false,
-               false,
-               true,
-               false,
-               false,
-               false
-              ]
-             },
-             {
-              "title": {
-               "text": "<b>Industrial Machinery & Goods : Supply Chain Management<br>Yearly ESG Exposure Ratio<b>"
-              }
-             }
-            ],
-            "label": "Industrial Machinery & Goods",
-            "method": "update"
-           },
-           {
-            "args": [
-             {
-              "visible": [
-               false,
                false,
                true,
                false,
@@ -2890,11 +2907,11 @@
              },
              {
               "title": {
-               "text": "<b>Investment Banking & Brokerage : Supply Chain Management<br>Yearly ESG Exposure Ratio<b>"
+               "text": "<b>Internet Media & Services : Data Security<br>Yearly ESG Exposure Ratio<b>"
               }
              }
             ],
-            "label": "Investment Banking & Brokerage",
+            "label": "Internet Media & Services",
             "method": "update"
            },
            {
@@ -2915,11 +2932,11 @@
              },
              {
               "title": {
-               "text": "<b>Iron & Steel Producers : Supply Chain Management<br>Yearly ESG Exposure Ratio<b>"
+               "text": "<b>Software & IT Services : Data Security<br>Yearly ESG Exposure Ratio<b>"
               }
              }
             ],
-            "label": "Iron & Steel Producers",
+            "label": "Software & IT Services",
             "method": "update"
            },
            {
@@ -2940,11 +2957,11 @@
              },
              {
               "title": {
-               "text": "<b>Internet Media & Services : Supply Chain Management<br>Yearly ESG Exposure Ratio<b>"
+               "text": "<b>Commercial Banks : Data Security<br>Yearly ESG Exposure Ratio<b>"
               }
              }
             ],
-            "label": "Internet Media & Services",
+            "label": "Commercial Banks",
             "method": "update"
            }
           ],
@@ -2999,9 +3016,9 @@
        }
       },
       "text/html": [
-       "<div>                            <div id=\"5b8c0e8e-1913-4a1f-9f77-74ead884b314\" class=\"plotly-graph-div\" style=\"height:525px; width:100%;\"></div>            <script type=\"text/javascript\">                require([\"plotly\"], function(Plotly) {                    window.PLOTLYENV=window.PLOTLYENV || {};                                    if (document.getElementById(\"5b8c0e8e-1913-4a1f-9f77-74ead884b314\")) {                    Plotly.newPlot(                        \"5b8c0e8e-1913-4a1f-9f77-74ead884b314\",                        [{\"name\":\"Hardware\",\"type\":\"scatter\",\"x\":[2016,2017,2018,2019,2020,2021,2022],\"xaxis\":\"x\",\"y\":[19.71,17.99,15.42,18.08,16.23,18.83,19.17],\"yaxis\":\"y\"},{\"name\":\"Industrial Machinery & Goods\",\"type\":\"scatter\",\"x\":[2016,2017,2018,2019,2020,2021,2022],\"xaxis\":\"x\",\"y\":[11.75,6.94,5.06,7.05,4.91,5.04,6.46],\"yaxis\":\"y\"},{\"name\":\"Investment Banking & Brokerage\",\"type\":\"scatter\",\"x\":[2016,2017,2018,2019,2020,2021,2022],\"xaxis\":\"x\",\"y\":[4.72,5.0,6.64,4.98,4.92,5.32,6.44],\"yaxis\":\"y\"},{\"name\":\"Iron & Steel Producers\",\"type\":\"scatter\",\"x\":[2016,2017,2018,2019,2020,2021,2022],\"xaxis\":\"x\",\"y\":[4.7,3.29,3.4,3.19,3.81,4.05,5.76],\"yaxis\":\"y\"},{\"name\":\"Internet Media & Services\",\"type\":\"scatter\",\"x\":[2016,2017,2018,2019,2020,2021,2022],\"xaxis\":\"x\",\"y\":[2.79,2.41,3.16,2.56,3.52,7.13,5.71],\"yaxis\":\"y\"},{\"name\":\"Hardware\",\"type\":\"bar\",\"x\":[2016,2017,2018,2019,2020,2021,2022],\"xaxis\":\"x2\",\"y\":[1855.04,2307.45,2021.79,2902.02,3533.28,3123.19,3210.79],\"yaxis\":\"y2\"},{\"name\":\"Industrial Machinery & Goods\",\"type\":\"bar\",\"x\":[2016,2017,2018,2019,2020,2021,2022],\"xaxis\":\"x2\",\"y\":[1105.85,890.23,663.84,1130.66,1069.52,835.97,1082.61],\"yaxis\":\"y2\"},{\"name\":\"Investment Banking & Brokerage\",\"type\":\"bar\",\"x\":[2016,2017,2018,2019,2020,2021,2022],\"xaxis\":\"x2\",\"y\":[444.46,640.99,871.13,798.83,1070.33,883.27,1077.99],\"yaxis\":\"y2\"},{\"name\":\"Iron & Steel Producers\",\"type\":\"bar\",\"x\":[2016,2017,2018,2019,2020,2021,2022],\"xaxis\":\"x2\",\"y\":[442.15,421.41,445.8,511.6,830.11,671.21,965.21],\"yaxis\":\"y2\"},{\"name\":\"Internet Media & Services\",\"type\":\"bar\",\"x\":[2016,2017,2018,2019,2020,2021,2022],\"xaxis\":\"x2\",\"y\":[262.79,308.89,414.63,410.32,765.55,1182.31,956.31],\"yaxis\":\"y2\"}],                        {\"font\":{\"size\":8},\"hovermode\":\"closest\",\"legend\":{\"font\":{\"size\":9},\"orientation\":\"h\",\"y\":-0.15,\"yanchor\":\"top\"},\"template\":{\"data\":{\"bar\":[{\"error_x\":{\"color\":\"#2a3f5f\"},\"error_y\":{\"color\":\"#2a3f5f\"},\"marker\":{\"line\":{\"color\":\"white\",\"width\":0.5},\"pattern\":{\"fillmode\":\"overlay\",\"size\":10,\"solidity\":0.2}},\"type\":\"bar\"}],\"barpolar\":[{\"marker\":{\"line\":{\"color\":\"white\",\"width\":0.5},\"pattern\":{\"fillmode\":\"overlay\",\"size\":10,\"solidity\":0.2}},\"type\":\"barpolar\"}],\"carpet\":[{\"aaxis\":{\"endlinecolor\":\"#2a3f5f\",\"gridcolor\":\"#C8D4E3\",\"linecolor\":\"#C8D4E3\",\"minorgridcolor\":\"#C8D4E3\",\"startlinecolor\":\"#2a3f5f\"},\"baxis\":{\"endlinecolor\":\"#2a3f5f\",\"gridcolor\":\"#C8D4E3\",\"linecolor\":\"#C8D4E3\",\"minorgridcolor\":\"#C8D4E3\",\"startlinecolor\":\"#2a3f5f\"},\"type\":\"carpet\"}],\"choropleth\":[{\"colorbar\":{\"outlinewidth\":0,\"ticks\":\"\"},\"type\":\"choropleth\"}],\"contour\":[{\"colorbar\":{\"outlinewidth\":0,\"ticks\":\"\"},\"colorscale\":[[0.0,\"#0d0887\"],[0.1111111111111111,\"#46039f\"],[0.2222222222222222,\"#7201a8\"],[0.3333333333333333,\"#9c179e\"],[0.4444444444444444,\"#bd3786\"],[0.5555555555555556,\"#d8576b\"],[0.6666666666666666,\"#ed7953\"],[0.7777777777777778,\"#fb9f3a\"],[0.8888888888888888,\"#fdca26\"],[1.0,\"#f0f921\"]],\"type\":\"contour\"}],\"contourcarpet\":[{\"colorbar\":{\"outlinewidth\":0,\"ticks\":\"\"},\"type\":\"contourcarpet\"}],\"heatmap\":[{\"colorbar\":{\"outlinewidth\":0,\"ticks\":\"\"},\"colorscale\":[[0.0,\"#0d0887\"],[0.1111111111111111,\"#46039f\"],[0.2222222222222222,\"#7201a8\"],[0.3333333333333333,\"#9c179e\"],[0.4444444444444444,\"#bd3786\"],[0.5555555555555556,\"#d8576b\"],[0.6666666666666666,\"#ed7953\"],[0.7777777777777778,\"#fb9f3a\"],[0.8888888888888888,\"#fdca26\"],[1.0,\"#f0f921\"]],\"type\":\"heatmap\"}],\"heatmapgl\":[{\"colorbar\":{\"outlinewidth\":0,\"ticks\":\"\"},\"colorscale\":[[0.0,\"#0d0887\"],[0.1111111111111111,\"#46039f\"],[0.2222222222222222,\"#7201a8\"],[0.3333333333333333,\"#9c179e\"],[0.4444444444444444,\"#bd3786\"],[0.5555555555555556,\"#d8576b\"],[0.6666666666666666,\"#ed7953\"],[0.7777777777777778,\"#fb9f3a\"],[0.8888888888888888,\"#fdca26\"],[1.0,\"#f0f921\"]],\"type\":\"heatmapgl\"}],\"histogram\":[{\"marker\":{\"pattern\":{\"fillmode\":\"overlay\",\"size\":10,\"solidity\":0.2}},\"type\":\"histogram\"}],\"histogram2d\":[{\"colorbar\":{\"outlinewidth\":0,\"ticks\":\"\"},\"colorscale\":[[0.0,\"#0d0887\"],[0.1111111111111111,\"#46039f\"],[0.2222222222222222,\"#7201a8\"],[0.3333333333333333,\"#9c179e\"],[0.4444444444444444,\"#bd3786\"],[0.5555555555555556,\"#d8576b\"],[0.6666666666666666,\"#ed7953\"],[0.7777777777777778,\"#fb9f3a\"],[0.8888888888888888,\"#fdca26\"],[1.0,\"#f0f921\"]],\"type\":\"histogram2d\"}],\"histogram2dcontour\":[{\"colorbar\":{\"outlinewidth\":0,\"ticks\":\"\"},\"colorscale\":[[0.0,\"#0d0887\"],[0.1111111111111111,\"#46039f\"],[0.2222222222222222,\"#7201a8\"],[0.3333333333333333,\"#9c179e\"],[0.4444444444444444,\"#bd3786\"],[0.5555555555555556,\"#d8576b\"],[0.6666666666666666,\"#ed7953\"],[0.7777777777777778,\"#fb9f3a\"],[0.8888888888888888,\"#fdca26\"],[1.0,\"#f0f921\"]],\"type\":\"histogram2dcontour\"}],\"mesh3d\":[{\"colorbar\":{\"outlinewidth\":0,\"ticks\":\"\"},\"type\":\"mesh3d\"}],\"parcoords\":[{\"line\":{\"colorbar\":{\"outlinewidth\":0,\"ticks\":\"\"}},\"type\":\"parcoords\"}],\"pie\":[{\"automargin\":true,\"type\":\"pie\"}],\"scatter\":[{\"marker\":{\"colorbar\":{\"outlinewidth\":0,\"ticks\":\"\"}},\"type\":\"scatter\"}],\"scatter3d\":[{\"line\":{\"colorbar\":{\"outlinewidth\":0,\"ticks\":\"\"}},\"marker\":{\"colorbar\":{\"outlinewidth\":0,\"ticks\":\"\"}},\"type\":\"scatter3d\"}],\"scattercarpet\":[{\"marker\":{\"colorbar\":{\"outlinewidth\":0,\"ticks\":\"\"}},\"type\":\"scattercarpet\"}],\"scattergeo\":[{\"marker\":{\"colorbar\":{\"outlinewidth\":0,\"ticks\":\"\"}},\"type\":\"scattergeo\"}],\"scattergl\":[{\"marker\":{\"colorbar\":{\"outlinewidth\":0,\"ticks\":\"\"}},\"type\":\"scattergl\"}],\"scattermapbox\":[{\"marker\":{\"colorbar\":{\"outlinewidth\":0,\"ticks\":\"\"}},\"type\":\"scattermapbox\"}],\"scatterpolar\":[{\"marker\":{\"colorbar\":{\"outlinewidth\":0,\"ticks\":\"\"}},\"type\":\"scatterpolar\"}],\"scatterpolargl\":[{\"marker\":{\"colorbar\":{\"outlinewidth\":0,\"ticks\":\"\"}},\"type\":\"scatterpolargl\"}],\"scatterternary\":[{\"marker\":{\"colorbar\":{\"outlinewidth\":0,\"ticks\":\"\"}},\"type\":\"scatterternary\"}],\"surface\":[{\"colorbar\":{\"outlinewidth\":0,\"ticks\":\"\"},\"colorscale\":[[0.0,\"#0d0887\"],[0.1111111111111111,\"#46039f\"],[0.2222222222222222,\"#7201a8\"],[0.3333333333333333,\"#9c179e\"],[0.4444444444444444,\"#bd3786\"],[0.5555555555555556,\"#d8576b\"],[0.6666666666666666,\"#ed7953\"],[0.7777777777777778,\"#fb9f3a\"],[0.8888888888888888,\"#fdca26\"],[1.0,\"#f0f921\"]],\"type\":\"surface\"}],\"table\":[{\"cells\":{\"fill\":{\"color\":\"#EBF0F8\"},\"line\":{\"color\":\"white\"}},\"header\":{\"fill\":{\"color\":\"#C8D4E3\"},\"line\":{\"color\":\"white\"}},\"type\":\"table\"}]},\"layout\":{\"annotationdefaults\":{\"arrowcolor\":\"#2a3f5f\",\"arrowhead\":0,\"arrowwidth\":1},\"autotypenumbers\":\"strict\",\"coloraxis\":{\"colorbar\":{\"outlinewidth\":0,\"ticks\":\"\"}},\"colorscale\":{\"diverging\":[[0,\"#8e0152\"],[0.1,\"#c51b7d\"],[0.2,\"#de77ae\"],[0.3,\"#f1b6da\"],[0.4,\"#fde0ef\"],[0.5,\"#f7f7f7\"],[0.6,\"#e6f5d0\"],[0.7,\"#b8e186\"],[0.8,\"#7fbc41\"],[0.9,\"#4d9221\"],[1,\"#276419\"]],\"sequential\":[[0.0,\"#0d0887\"],[0.1111111111111111,\"#46039f\"],[0.2222222222222222,\"#7201a8\"],[0.3333333333333333,\"#9c179e\"],[0.4444444444444444,\"#bd3786\"],[0.5555555555555556,\"#d8576b\"],[0.6666666666666666,\"#ed7953\"],[0.7777777777777778,\"#fb9f3a\"],[0.8888888888888888,\"#fdca26\"],[1.0,\"#f0f921\"]],\"sequentialminus\":[[0.0,\"#0d0887\"],[0.1111111111111111,\"#46039f\"],[0.2222222222222222,\"#7201a8\"],[0.3333333333333333,\"#9c179e\"],[0.4444444444444444,\"#bd3786\"],[0.5555555555555556,\"#d8576b\"],[0.6666666666666666,\"#ed7953\"],[0.7777777777777778,\"#fb9f3a\"],[0.8888888888888888,\"#fdca26\"],[1.0,\"#f0f921\"]]},\"colorway\":[\"#636efa\",\"#EF553B\",\"#00cc96\",\"#ab63fa\",\"#FFA15A\",\"#19d3f3\",\"#FF6692\",\"#B6E880\",\"#FF97FF\",\"#FECB52\"],\"font\":{\"color\":\"#2a3f5f\"},\"geo\":{\"bgcolor\":\"white\",\"lakecolor\":\"white\",\"landcolor\":\"white\",\"showlakes\":true,\"showland\":true,\"subunitcolor\":\"#C8D4E3\"},\"hoverlabel\":{\"align\":\"left\"},\"hovermode\":\"closest\",\"mapbox\":{\"style\":\"light\"},\"paper_bgcolor\":\"white\",\"plot_bgcolor\":\"white\",\"polar\":{\"angularaxis\":{\"gridcolor\":\"#EBF0F8\",\"linecolor\":\"#EBF0F8\",\"ticks\":\"\"},\"bgcolor\":\"white\",\"radialaxis\":{\"gridcolor\":\"#EBF0F8\",\"linecolor\":\"#EBF0F8\",\"ticks\":\"\"}},\"scene\":{\"xaxis\":{\"backgroundcolor\":\"white\",\"gridcolor\":\"#DFE8F3\",\"gridwidth\":2,\"linecolor\":\"#EBF0F8\",\"showbackground\":true,\"ticks\":\"\",\"zerolinecolor\":\"#EBF0F8\"},\"yaxis\":{\"backgroundcolor\":\"white\",\"gridcolor\":\"#DFE8F3\",\"gridwidth\":2,\"linecolor\":\"#EBF0F8\",\"showbackground\":true,\"ticks\":\"\",\"zerolinecolor\":\"#EBF0F8\"},\"zaxis\":{\"backgroundcolor\":\"white\",\"gridcolor\":\"#DFE8F3\",\"gridwidth\":2,\"linecolor\":\"#EBF0F8\",\"showbackground\":true,\"ticks\":\"\",\"zerolinecolor\":\"#EBF0F8\"}},\"shapedefaults\":{\"line\":{\"color\":\"#2a3f5f\"}},\"ternary\":{\"aaxis\":{\"gridcolor\":\"#DFE8F3\",\"linecolor\":\"#A2B1C6\",\"ticks\":\"\"},\"baxis\":{\"gridcolor\":\"#DFE8F3\",\"linecolor\":\"#A2B1C6\",\"ticks\":\"\"},\"bgcolor\":\"white\",\"caxis\":{\"gridcolor\":\"#DFE8F3\",\"linecolor\":\"#A2B1C6\",\"ticks\":\"\"}},\"title\":{\"x\":0.05},\"xaxis\":{\"automargin\":true,\"gridcolor\":\"#EBF0F8\",\"linecolor\":\"#EBF0F8\",\"ticks\":\"\",\"title\":{\"standoff\":15},\"zerolinecolor\":\"#EBF0F8\",\"zerolinewidth\":2},\"yaxis\":{\"automargin\":true,\"gridcolor\":\"#EBF0F8\",\"linecolor\":\"#EBF0F8\",\"ticks\":\"\",\"title\":{\"standoff\":15},\"zerolinecolor\":\"#EBF0F8\",\"zerolinewidth\":2}}},\"title\":{\"text\":\"<b>Supply Chain Management<br>Yearly ESG Exposure<b>\"},\"updatemenus\":[{\"active\":0,\"buttons\":[{\"args\":[{\"visible\":[true,true,true,true,true,true,true,true,true,true]},{\"title\":{\"text\":\"<b>Supply Chain Management<br>Yearly ESG Exposure<b>\"}}],\"label\":\"All\",\"method\":\"update\"},{\"args\":[{\"visible\":[true,false,false,false,false,true,false,false,false,false]},{\"title\":{\"text\":\"<b>Hardware : Supply Chain Management<br>Yearly ESG Exposure Ratio<b>\"}}],\"label\":\"Hardware\",\"method\":\"update\"},{\"args\":[{\"visible\":[false,true,false,false,false,false,true,false,false,false]},{\"title\":{\"text\":\"<b>Industrial Machinery & Goods : Supply Chain Management<br>Yearly ESG Exposure Ratio<b>\"}}],\"label\":\"Industrial Machinery & Goods\",\"method\":\"update\"},{\"args\":[{\"visible\":[false,false,true,false,false,false,false,true,false,false]},{\"title\":{\"text\":\"<b>Investment Banking & Brokerage : Supply Chain Management<br>Yearly ESG Exposure Ratio<b>\"}}],\"label\":\"Investment Banking & Brokerage\",\"method\":\"update\"},{\"args\":[{\"visible\":[false,false,false,true,false,false,false,false,true,false]},{\"title\":{\"text\":\"<b>Iron & Steel Producers : Supply Chain Management<br>Yearly ESG Exposure Ratio<b>\"}}],\"label\":\"Iron & Steel Producers\",\"method\":\"update\"},{\"args\":[{\"visible\":[false,false,false,false,true,false,false,false,false,true]},{\"title\":{\"text\":\"<b>Internet Media & Services : Supply Chain Management<br>Yearly ESG Exposure Ratio<b>\"}}],\"label\":\"Internet Media & Services\",\"method\":\"update\"}],\"font\":{\"size\":9},\"x\":1,\"xanchor\":\"right\",\"y\":1.08,\"yanchor\":\"bottom\"}],\"xaxis\":{\"anchor\":\"y\",\"domain\":[0.0,1.0],\"matches\":\"x2\",\"showticklabels\":false},\"xaxis2\":{\"anchor\":\"y2\",\"domain\":[0.0,1.0],\"title\":{\"text\":\"<b>Year<b>\"}},\"yaxis\":{\"anchor\":\"x\",\"domain\":[0.424,1.0],\"title\":{\"text\":\"<b>ESG Exposure Ratio (%)</b>\"}},\"yaxis2\":{\"anchor\":\"x2\",\"domain\":[0.0,0.364],\"title\":{\"text\":\"<b>ESG Exposure<b>\"}}},                        {\"responsive\": true}                    ).then(function(){\n",
+       "<div>                            <div id=\"d9700b90-516b-4c2f-8e17-dd73882099f7\" class=\"plotly-graph-div\" style=\"height:525px; width:100%;\"></div>            <script type=\"text/javascript\">                require([\"plotly\"], function(Plotly) {                    window.PLOTLYENV=window.PLOTLYENV || {};                                    if (document.getElementById(\"d9700b90-516b-4c2f-8e17-dd73882099f7\")) {                    Plotly.newPlot(                        \"d9700b90-516b-4c2f-8e17-dd73882099f7\",                        [{\"name\":\"Telecommunication Services\",\"type\":\"scatter\",\"x\":[2016,2017,2018,2019,2020,2021,2022],\"xaxis\":\"x\",\"y\":[40.47,37.77,44.63,39.45,36.58,35.21,34.26],\"yaxis\":\"y\"},{\"name\":\"Hardware\",\"type\":\"scatter\",\"x\":[2016,2017,2018,2019,2020,2021,2022],\"xaxis\":\"x\",\"y\":[32.54,28.31,23.51,23.55,19.94,21.58,24.93],\"yaxis\":\"y\"},{\"name\":\"Internet Media & Services\",\"type\":\"scatter\",\"x\":[2016,2017,2018,2019,2020,2021,2022],\"xaxis\":\"x\",\"y\":[6.53,9.21,8.91,8.49,15.23,11.87,14.85],\"yaxis\":\"y\"},{\"name\":\"Software & IT Services\",\"type\":\"scatter\",\"x\":[2016,2017,2018,2019,2020,2021,2022],\"xaxis\":\"x\",\"y\":[9.19,8.61,8.95,11.84,12.07,10.19,10.32],\"yaxis\":\"y\"},{\"name\":\"Commercial Banks\",\"type\":\"scatter\",\"x\":[2016,2017,2018,2019,2020,2021,2022],\"xaxis\":\"x\",\"y\":[1.58,1.95,1.94,2.61,1.74,2.27,1.75],\"yaxis\":\"y\"},{\"name\":\"Telecommunication Services\",\"type\":\"bar\",\"x\":[2016,2017,2018,2019,2020,2021,2022],\"xaxis\":\"x2\",\"y\":[992.17,1202.13,1779.27,1804.1,1778.53,1513.69,1598.69],\"yaxis\":\"y2\"},{\"name\":\"Hardware\",\"type\":\"bar\",\"x\":[2016,2017,2018,2019,2020,2021,2022],\"xaxis\":\"x2\",\"y\":[797.67,901.04,937.06,1076.83,969.6,927.89,1163.06],\"yaxis\":\"y2\"},{\"name\":\"Internet Media & Services\",\"type\":\"bar\",\"x\":[2016,2017,2018,2019,2020,2021,2022],\"xaxis\":\"x2\",\"y\":[160.05,292.99,355.2,388.02,740.28,510.51,692.77],\"yaxis\":\"y2\"},{\"name\":\"Software & IT Services\",\"type\":\"bar\",\"x\":[2016,2017,2018,2019,2020,2021,2022],\"xaxis\":\"x2\",\"y\":[225.34,274.06,356.64,541.55,586.9,437.92,481.74],\"yaxis\":\"y2\"},{\"name\":\"Commercial Banks\",\"type\":\"bar\",\"x\":[2016,2017,2018,2019,2020,2021,2022],\"xaxis\":\"x2\",\"y\":[38.84,62.21,77.14,119.15,84.37,97.39,81.81],\"yaxis\":\"y2\"}],                        {\"font\":{\"size\":8},\"hovermode\":\"closest\",\"legend\":{\"font\":{\"size\":9},\"orientation\":\"h\",\"y\":-0.15,\"yanchor\":\"top\"},\"template\":{\"data\":{\"bar\":[{\"error_x\":{\"color\":\"#2a3f5f\"},\"error_y\":{\"color\":\"#2a3f5f\"},\"marker\":{\"line\":{\"color\":\"white\",\"width\":0.5},\"pattern\":{\"fillmode\":\"overlay\",\"size\":10,\"solidity\":0.2}},\"type\":\"bar\"}],\"barpolar\":[{\"marker\":{\"line\":{\"color\":\"white\",\"width\":0.5},\"pattern\":{\"fillmode\":\"overlay\",\"size\":10,\"solidity\":0.2}},\"type\":\"barpolar\"}],\"carpet\":[{\"aaxis\":{\"endlinecolor\":\"#2a3f5f\",\"gridcolor\":\"#C8D4E3\",\"linecolor\":\"#C8D4E3\",\"minorgridcolor\":\"#C8D4E3\",\"startlinecolor\":\"#2a3f5f\"},\"baxis\":{\"endlinecolor\":\"#2a3f5f\",\"gridcolor\":\"#C8D4E3\",\"linecolor\":\"#C8D4E3\",\"minorgridcolor\":\"#C8D4E3\",\"startlinecolor\":\"#2a3f5f\"},\"type\":\"carpet\"}],\"choropleth\":[{\"colorbar\":{\"outlinewidth\":0,\"ticks\":\"\"},\"type\":\"choropleth\"}],\"contour\":[{\"colorbar\":{\"outlinewidth\":0,\"ticks\":\"\"},\"colorscale\":[[0.0,\"#0d0887\"],[0.1111111111111111,\"#46039f\"],[0.2222222222222222,\"#7201a8\"],[0.3333333333333333,\"#9c179e\"],[0.4444444444444444,\"#bd3786\"],[0.5555555555555556,\"#d8576b\"],[0.6666666666666666,\"#ed7953\"],[0.7777777777777778,\"#fb9f3a\"],[0.8888888888888888,\"#fdca26\"],[1.0,\"#f0f921\"]],\"type\":\"contour\"}],\"contourcarpet\":[{\"colorbar\":{\"outlinewidth\":0,\"ticks\":\"\"},\"type\":\"contourcarpet\"}],\"heatmap\":[{\"colorbar\":{\"outlinewidth\":0,\"ticks\":\"\"},\"colorscale\":[[0.0,\"#0d0887\"],[0.1111111111111111,\"#46039f\"],[0.2222222222222222,\"#7201a8\"],[0.3333333333333333,\"#9c179e\"],[0.4444444444444444,\"#bd3786\"],[0.5555555555555556,\"#d8576b\"],[0.6666666666666666,\"#ed7953\"],[0.7777777777777778,\"#fb9f3a\"],[0.8888888888888888,\"#fdca26\"],[1.0,\"#f0f921\"]],\"type\":\"heatmap\"}],\"heatmapgl\":[{\"colorbar\":{\"outlinewidth\":0,\"ticks\":\"\"},\"colorscale\":[[0.0,\"#0d0887\"],[0.1111111111111111,\"#46039f\"],[0.2222222222222222,\"#7201a8\"],[0.3333333333333333,\"#9c179e\"],[0.4444444444444444,\"#bd3786\"],[0.5555555555555556,\"#d8576b\"],[0.6666666666666666,\"#ed7953\"],[0.7777777777777778,\"#fb9f3a\"],[0.8888888888888888,\"#fdca26\"],[1.0,\"#f0f921\"]],\"type\":\"heatmapgl\"}],\"histogram\":[{\"marker\":{\"pattern\":{\"fillmode\":\"overlay\",\"size\":10,\"solidity\":0.2}},\"type\":\"histogram\"}],\"histogram2d\":[{\"colorbar\":{\"outlinewidth\":0,\"ticks\":\"\"},\"colorscale\":[[0.0,\"#0d0887\"],[0.1111111111111111,\"#46039f\"],[0.2222222222222222,\"#7201a8\"],[0.3333333333333333,\"#9c179e\"],[0.4444444444444444,\"#bd3786\"],[0.5555555555555556,\"#d8576b\"],[0.6666666666666666,\"#ed7953\"],[0.7777777777777778,\"#fb9f3a\"],[0.8888888888888888,\"#fdca26\"],[1.0,\"#f0f921\"]],\"type\":\"histogram2d\"}],\"histogram2dcontour\":[{\"colorbar\":{\"outlinewidth\":0,\"ticks\":\"\"},\"colorscale\":[[0.0,\"#0d0887\"],[0.1111111111111111,\"#46039f\"],[0.2222222222222222,\"#7201a8\"],[0.3333333333333333,\"#9c179e\"],[0.4444444444444444,\"#bd3786\"],[0.5555555555555556,\"#d8576b\"],[0.6666666666666666,\"#ed7953\"],[0.7777777777777778,\"#fb9f3a\"],[0.8888888888888888,\"#fdca26\"],[1.0,\"#f0f921\"]],\"type\":\"histogram2dcontour\"}],\"mesh3d\":[{\"colorbar\":{\"outlinewidth\":0,\"ticks\":\"\"},\"type\":\"mesh3d\"}],\"parcoords\":[{\"line\":{\"colorbar\":{\"outlinewidth\":0,\"ticks\":\"\"}},\"type\":\"parcoords\"}],\"pie\":[{\"automargin\":true,\"type\":\"pie\"}],\"scatter\":[{\"marker\":{\"colorbar\":{\"outlinewidth\":0,\"ticks\":\"\"}},\"type\":\"scatter\"}],\"scatter3d\":[{\"line\":{\"colorbar\":{\"outlinewidth\":0,\"ticks\":\"\"}},\"marker\":{\"colorbar\":{\"outlinewidth\":0,\"ticks\":\"\"}},\"type\":\"scatter3d\"}],\"scattercarpet\":[{\"marker\":{\"colorbar\":{\"outlinewidth\":0,\"ticks\":\"\"}},\"type\":\"scattercarpet\"}],\"scattergeo\":[{\"marker\":{\"colorbar\":{\"outlinewidth\":0,\"ticks\":\"\"}},\"type\":\"scattergeo\"}],\"scattergl\":[{\"marker\":{\"colorbar\":{\"outlinewidth\":0,\"ticks\":\"\"}},\"type\":\"scattergl\"}],\"scattermapbox\":[{\"marker\":{\"colorbar\":{\"outlinewidth\":0,\"ticks\":\"\"}},\"type\":\"scattermapbox\"}],\"scatterpolar\":[{\"marker\":{\"colorbar\":{\"outlinewidth\":0,\"ticks\":\"\"}},\"type\":\"scatterpolar\"}],\"scatterpolargl\":[{\"marker\":{\"colorbar\":{\"outlinewidth\":0,\"ticks\":\"\"}},\"type\":\"scatterpolargl\"}],\"scatterternary\":[{\"marker\":{\"colorbar\":{\"outlinewidth\":0,\"ticks\":\"\"}},\"type\":\"scatterternary\"}],\"surface\":[{\"colorbar\":{\"outlinewidth\":0,\"ticks\":\"\"},\"colorscale\":[[0.0,\"#0d0887\"],[0.1111111111111111,\"#46039f\"],[0.2222222222222222,\"#7201a8\"],[0.3333333333333333,\"#9c179e\"],[0.4444444444444444,\"#bd3786\"],[0.5555555555555556,\"#d8576b\"],[0.6666666666666666,\"#ed7953\"],[0.7777777777777778,\"#fb9f3a\"],[0.8888888888888888,\"#fdca26\"],[1.0,\"#f0f921\"]],\"type\":\"surface\"}],\"table\":[{\"cells\":{\"fill\":{\"color\":\"#EBF0F8\"},\"line\":{\"color\":\"white\"}},\"header\":{\"fill\":{\"color\":\"#C8D4E3\"},\"line\":{\"color\":\"white\"}},\"type\":\"table\"}]},\"layout\":{\"annotationdefaults\":{\"arrowcolor\":\"#2a3f5f\",\"arrowhead\":0,\"arrowwidth\":1},\"autotypenumbers\":\"strict\",\"coloraxis\":{\"colorbar\":{\"outlinewidth\":0,\"ticks\":\"\"}},\"colorscale\":{\"diverging\":[[0,\"#8e0152\"],[0.1,\"#c51b7d\"],[0.2,\"#de77ae\"],[0.3,\"#f1b6da\"],[0.4,\"#fde0ef\"],[0.5,\"#f7f7f7\"],[0.6,\"#e6f5d0\"],[0.7,\"#b8e186\"],[0.8,\"#7fbc41\"],[0.9,\"#4d9221\"],[1,\"#276419\"]],\"sequential\":[[0.0,\"#0d0887\"],[0.1111111111111111,\"#46039f\"],[0.2222222222222222,\"#7201a8\"],[0.3333333333333333,\"#9c179e\"],[0.4444444444444444,\"#bd3786\"],[0.5555555555555556,\"#d8576b\"],[0.6666666666666666,\"#ed7953\"],[0.7777777777777778,\"#fb9f3a\"],[0.8888888888888888,\"#fdca26\"],[1.0,\"#f0f921\"]],\"sequentialminus\":[[0.0,\"#0d0887\"],[0.1111111111111111,\"#46039f\"],[0.2222222222222222,\"#7201a8\"],[0.3333333333333333,\"#9c179e\"],[0.4444444444444444,\"#bd3786\"],[0.5555555555555556,\"#d8576b\"],[0.6666666666666666,\"#ed7953\"],[0.7777777777777778,\"#fb9f3a\"],[0.8888888888888888,\"#fdca26\"],[1.0,\"#f0f921\"]]},\"colorway\":[\"#636efa\",\"#EF553B\",\"#00cc96\",\"#ab63fa\",\"#FFA15A\",\"#19d3f3\",\"#FF6692\",\"#B6E880\",\"#FF97FF\",\"#FECB52\"],\"font\":{\"color\":\"#2a3f5f\"},\"geo\":{\"bgcolor\":\"white\",\"lakecolor\":\"white\",\"landcolor\":\"white\",\"showlakes\":true,\"showland\":true,\"subunitcolor\":\"#C8D4E3\"},\"hoverlabel\":{\"align\":\"left\"},\"hovermode\":\"closest\",\"mapbox\":{\"style\":\"light\"},\"paper_bgcolor\":\"white\",\"plot_bgcolor\":\"white\",\"polar\":{\"angularaxis\":{\"gridcolor\":\"#EBF0F8\",\"linecolor\":\"#EBF0F8\",\"ticks\":\"\"},\"bgcolor\":\"white\",\"radialaxis\":{\"gridcolor\":\"#EBF0F8\",\"linecolor\":\"#EBF0F8\",\"ticks\":\"\"}},\"scene\":{\"xaxis\":{\"backgroundcolor\":\"white\",\"gridcolor\":\"#DFE8F3\",\"gridwidth\":2,\"linecolor\":\"#EBF0F8\",\"showbackground\":true,\"ticks\":\"\",\"zerolinecolor\":\"#EBF0F8\"},\"yaxis\":{\"backgroundcolor\":\"white\",\"gridcolor\":\"#DFE8F3\",\"gridwidth\":2,\"linecolor\":\"#EBF0F8\",\"showbackground\":true,\"ticks\":\"\",\"zerolinecolor\":\"#EBF0F8\"},\"zaxis\":{\"backgroundcolor\":\"white\",\"gridcolor\":\"#DFE8F3\",\"gridwidth\":2,\"linecolor\":\"#EBF0F8\",\"showbackground\":true,\"ticks\":\"\",\"zerolinecolor\":\"#EBF0F8\"}},\"shapedefaults\":{\"line\":{\"color\":\"#2a3f5f\"}},\"ternary\":{\"aaxis\":{\"gridcolor\":\"#DFE8F3\",\"linecolor\":\"#A2B1C6\",\"ticks\":\"\"},\"baxis\":{\"gridcolor\":\"#DFE8F3\",\"linecolor\":\"#A2B1C6\",\"ticks\":\"\"},\"bgcolor\":\"white\",\"caxis\":{\"gridcolor\":\"#DFE8F3\",\"linecolor\":\"#A2B1C6\",\"ticks\":\"\"}},\"title\":{\"x\":0.05},\"xaxis\":{\"automargin\":true,\"gridcolor\":\"#EBF0F8\",\"linecolor\":\"#EBF0F8\",\"ticks\":\"\",\"title\":{\"standoff\":15},\"zerolinecolor\":\"#EBF0F8\",\"zerolinewidth\":2},\"yaxis\":{\"automargin\":true,\"gridcolor\":\"#EBF0F8\",\"linecolor\":\"#EBF0F8\",\"ticks\":\"\",\"title\":{\"standoff\":15},\"zerolinecolor\":\"#EBF0F8\",\"zerolinewidth\":2}}},\"title\":{\"text\":\"<b>Data Security<br>Yearly ESG Exposure<b>\"},\"updatemenus\":[{\"active\":0,\"buttons\":[{\"args\":[{\"visible\":[true,true,true,true,true,true,true,true,true,true]},{\"title\":{\"text\":\"<b>Data Security<br>Yearly ESG Exposure<b>\"}}],\"label\":\"All\",\"method\":\"update\"},{\"args\":[{\"visible\":[true,false,false,false,false,true,false,false,false,false]},{\"title\":{\"text\":\"<b>Telecommunication Services : Data Security<br>Yearly ESG Exposure Ratio<b>\"}}],\"label\":\"Telecommunication Services\",\"method\":\"update\"},{\"args\":[{\"visible\":[false,true,false,false,false,false,true,false,false,false]},{\"title\":{\"text\":\"<b>Hardware : Data Security<br>Yearly ESG Exposure Ratio<b>\"}}],\"label\":\"Hardware\",\"method\":\"update\"},{\"args\":[{\"visible\":[false,false,true,false,false,false,false,true,false,false]},{\"title\":{\"text\":\"<b>Internet Media & Services : Data Security<br>Yearly ESG Exposure Ratio<b>\"}}],\"label\":\"Internet Media & Services\",\"method\":\"update\"},{\"args\":[{\"visible\":[false,false,false,true,false,false,false,false,true,false]},{\"title\":{\"text\":\"<b>Software & IT Services : Data Security<br>Yearly ESG Exposure Ratio<b>\"}}],\"label\":\"Software & IT Services\",\"method\":\"update\"},{\"args\":[{\"visible\":[false,false,false,false,true,false,false,false,false,true]},{\"title\":{\"text\":\"<b>Commercial Banks : Data Security<br>Yearly ESG Exposure Ratio<b>\"}}],\"label\":\"Commercial Banks\",\"method\":\"update\"}],\"font\":{\"size\":9},\"x\":1,\"xanchor\":\"right\",\"y\":1.08,\"yanchor\":\"bottom\"}],\"xaxis\":{\"anchor\":\"y\",\"domain\":[0.0,1.0],\"matches\":\"x2\",\"showticklabels\":false},\"xaxis2\":{\"anchor\":\"y2\",\"domain\":[0.0,1.0],\"title\":{\"text\":\"<b>Year<b>\"}},\"yaxis\":{\"anchor\":\"x\",\"domain\":[0.424,1.0],\"title\":{\"text\":\"<b>ESG Exposure Ratio (%)</b>\"}},\"yaxis2\":{\"anchor\":\"x2\",\"domain\":[0.0,0.364],\"title\":{\"text\":\"<b>ESG Exposure<b>\"}}},                        {\"responsive\": true}                    ).then(function(){\n",
        "                            \n",
-       "var gd = document.getElementById('5b8c0e8e-1913-4a1f-9f77-74ead884b314');\n",
+       "var gd = document.getElementById('d9700b90-516b-4c2f-8e17-dd73882099f7');\n",
        "var x = new MutationObserver(function (mutations, observer) {{\n",
        "        var display = window.getComputedStyle(gd).display;\n",
        "        if (!display || display === 'none') {{\n",
@@ -3031,7 +3048,7 @@
     }
    ],
    "source": [
-    "industry_tag_data = extract_tag_industry(bulk_data, 'Supply Chain Management',top5=True)"
+    "industry_tag_data = extract_tag_industry(bulk_data, 'Data Security',top5=True)"
    ]
   },
   {
