@@ -46,7 +46,6 @@ export default function Post({fileStructure, file}) {
 
   useEffect(() => {
     categorizeTypes();
-    // console.log(cells)
   },[router])
 
   return (
@@ -61,7 +60,7 @@ export default function Post({fileStructure, file}) {
         <Frame fileStructure={fileStructure}>
           <Stack mt={6}>
             {cells.map((el, i) => {
-              if(el.type === 'cell') {
+              if(el.type === 'cell' && el.data.cell_type === 'markdown') {
                 return (
                   <Stack key={i} sx={{maxWidth: '900px'}}>
                     <IpynbRenderer
@@ -83,9 +82,7 @@ export default function Post({fileStructure, file}) {
                   </Stack>
                 )
               } else if (el.type === 'plotly') {
-                // console.log(el.data.outputs)
                 return (el.data.outputs.map((output, i) => {
-                  // console.log(output)
                   return (
                     <Stack key={i} sx={{mb: '20px'}}>
                       <PlotGraph
