@@ -16,7 +16,7 @@ const FileMenu = ({node}) => {
     <Link href={`/post/${link}`}>
       <ListItemButton
         sx={{
-          mb: '10px'
+          mb: '10px',
         }}
       >
         <ListItemIcon>

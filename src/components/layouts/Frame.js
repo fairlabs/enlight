@@ -19,7 +19,7 @@ export const Frame = ({ children, banner, fileStructure }) => {
       >
         <SideMenu fileStructure={fileStructure} />
         <Stack sx={{
-          width: '900px',
+          maxWidth: '1200px',
         }}>
           {children}
         </Stack>

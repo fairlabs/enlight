@@ -12,6 +12,7 @@ const CustomCard = ({thumbnail, title, category, link}) => {
         '&:hover': {
           boxShadow: '2px 3px 3px grey',
         },
+        width: '290px'
       }}
       onClick={() => window.location.href=link}
     >

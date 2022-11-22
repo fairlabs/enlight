@@ -9,7 +9,7 @@ export const SideMenu = ({ fileStructure }) => {
   return (
     <Stack sx={{
       padding: '20px',
-      minWidth: '280px', 
+      width: '300px', 
       }}
     >
       <Stack
@@ -27,7 +27,7 @@ export const SideMenu = ({ fileStructure }) => {
         </Typography>
         <List
           sx={{ 
-            maxWidth: 360, 
+            maxWidth: '100%', 
           }}
         >
           {files.map((node, i) => (

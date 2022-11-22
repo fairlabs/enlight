@@ -1457,6 +1457,7 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   font-weight: 400;
+  line-height: 1.8em;
 }
 .ipynb-renderer-root .rendered_html tr,
 .ipynb-renderer-root .rendered_html th,
@@ -2789,6 +2790,7 @@
 .ipynb-renderer-root div.rendered_html h5 {
   font-family: sans-serif;
   margin: 0.4em 0.2em 0.3em 0.2em !important;
+  line-height: 1.3em;
 }
 .ipynb-renderer-root .rendered_html h1:first-child,
 .ipynb-renderer-root .rendered_html h2:first-child,
@@ -2796,8 +2798,8 @@
 .ipynb-renderer-root .rendered_html h4:first-child,
 .ipynb-renderer-root .rendered_html h5:first-child,
 .ipynb-renderer-root .rendered_html h6:first-child {
-  margin-top: 0.2em !important;
-  margin-bottom: 0.2em !important;
+  margin-top: 0.7em !important;
+  margin-bottom: 0.7em !important;
 }
 .ipynb-renderer-root .rendered_html h1,
 .ipynb-renderer-root .text_cell_render h1 {
