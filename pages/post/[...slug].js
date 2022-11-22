@@ -1,60 +1,24 @@
-import { useState, useEffect } from 'react';
 import Head from 'next/head';
 import { IpynbRenderer } from "react-ipynb-renderer";
 import dynamic from 'next/dynamic';
 import Frame from 'src/components/layouts/Frame';
-import { useRouter } from 'next/router';
 import { Stack } from '@mui/material';
 import { makeFileStructure, makePaths } from 'src/utility/utility';
 import fs from 'fs';
+import { useCells } from 'src/hooks/hooks';
 
 export default function Post({fileStructure, file, title}) {
 
-  const router = useRouter();
-  let ipynbCells = file.cells;
-  const [cells, setCells] = useState([]);
+  const [cells] = useCells(file);
   const PlotGraph = dynamic(import('src/components/PlotGraph'),{ssr: false});
-  const fileName = router.query.slug[router.query.slug.length]
-
-  const categorizeTypes = async () => {
-    let arr = [];
-    await ipynbCells.forEach((el, i) => {
-      if (el.outputs?.length > 0) {
-        el.outputs.forEach((e, i) => {
-          if (e.data && e.data === "application/vnd.plotly.v1+json") {
-            console.log('?')
-            arr.push({type: 'plotly', data: el});
-          }
-        })
-      }
-      if (el.outputs && el.outputs[0] && el.outputs[0].data && el.outputs[0].data["application/vnd.plotly.v1+json"]) {
-        arr.push({type: 'cell', data: eliminateOutputs(el)});
-        arr.push({type: 'plotly', data: el});
-      } else {
-        arr.push({type: 'cell', data: el});
-      }
-    })
-    setCells(arr);
-  };
-
-  const eliminateOutputs = (obj) => {
-    const deepCopiedObj = JSON.parse(JSON.stringify(obj));
-    deepCopiedObj.outputs = [];
-    return deepCopiedObj;
-  }
-
-  useEffect(() => {
-    categorizeTypes();
-  },[router])
 
   return (
-    <div>
+    <>
       <Head>
         <title>{title}</title>
         <meta name="description" content="Fairlabs Enlight" />
         <link rel="icon" href="/fairlabs_icon.svg" />
       </Head>
-
       <main>
         <Frame fileStructure={fileStructure}>
           <Stack mt={6}>
@@ -96,7 +60,7 @@ export default function Post({fileStructure, file, title}) {
           </Stack>
         </Frame>
       </main>
-    </div>
+    </>
   )
 }
 

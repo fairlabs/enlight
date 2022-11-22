@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { useRouter } from 'next/router';
 
 export const useSideMenu = (fileStructure) => {
 
@@ -46,4 +47,43 @@ export const usePosts = (fileStructure) => {
   }, [])
   
   return [posts];
+}
+
+export const useCells = (file) => {
+  const router = useRouter();
+  const [cells, setCells] = useState([]);
+  let ipynbCells = file.cells;
+
+  const categorizeTypes = async () => {
+    let arr = [];
+    await ipynbCells.forEach((el, i) => {
+      if (el.outputs?.length > 0) {
+        el.outputs.forEach((e, i) => {
+          if (e.data && e.data === "application/vnd.plotly.v1+json") {
+            console.log('?')
+            arr.push({type: 'plotly', data: el});
+          }
+        })
+      }
+      if (el.outputs && el.outputs[0] && el.outputs[0].data && el.outputs[0].data["application/vnd.plotly.v1+json"]) {
+        arr.push({type: 'cell', data: eliminateOutputs(el)});
+        arr.push({type: 'plotly', data: el});
+      } else {
+        arr.push({type: 'cell', data: el});
+      }
+    })
+    setCells(arr);
+  };
+
+  const eliminateOutputs = (obj) => {
+    const deepCopiedObj = JSON.parse(JSON.stringify(obj));
+    deepCopiedObj.outputs = [];
+    return deepCopiedObj;
+  }
+
+  useEffect(() => {
+    categorizeTypes();
+  },[router])
+
+  return [cells];
 }
