@@ -32,7 +32,7 @@ export default function Home({ fileStructure }) {
             <Grid container spacing={2}>
             {posts
               .slice(contentsNperPage*page, contentsNperPage*(page+1))
-              .map((post, i) => <ContentCard post={post} index={i}/>)
+              .map((post, i) => <ContentCard key={`ContentCard_${i}`} post={post} />)
             }
             </Grid>
             <Stack direction='row' sx={{py: 10, justifyContent: 'center'}}>

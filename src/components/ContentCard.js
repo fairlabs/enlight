@@ -1,7 +1,7 @@
 import Card from 'src/ui/Card';
 import { Grid } from '@mui/material';
 
-const ContentCard = ({post, index}) => {
+const ContentCard = ({post}) => {
 
   let arr = post.link.split('contents/')[1].split('/');
   let categoryArr = arr.slice(0, -1)
@@ -11,7 +11,7 @@ const ContentCard = ({post, index}) => {
   const link = linkArr.join('/');
 
   return (
-    <Grid key={`ContentCard_${index}`} item xs={4}>
+    <Grid item xs={4}>
       <Card 
         title={post.name.split('.')[0]}
         category={category}
