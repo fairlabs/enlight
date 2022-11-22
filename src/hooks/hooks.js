@@ -60,7 +60,6 @@ export const useCells = (file) => {
       if (el.outputs?.length > 0) {
         el.outputs.forEach((e, i) => {
           if (e.data && e.data === "application/vnd.plotly.v1+json") {
-            console.log('?')
             arr.push({type: 'plotly', data: el});
           }
         })

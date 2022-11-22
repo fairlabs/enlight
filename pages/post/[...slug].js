@@ -1,16 +1,14 @@
 import Head from 'next/head';
-import { IpynbRenderer } from "react-ipynb-renderer";
-import dynamic from 'next/dynamic';
 import Frame from 'src/components/layouts/Frame';
 import { Stack } from '@mui/material';
 import { makeFileStructure, makePaths } from 'src/utility/utility';
 import fs from 'fs';
 import { useCells } from 'src/hooks/hooks';
+import PostBlock from 'src/components/posts/PostBlock';
 
 export default function Post({fileStructure, file, title}) {
 
   const [cells] = useCells(file);
-  const PlotGraph = dynamic(import('src/components/PlotGraph'),{ssr: false});
 
   return (
     <>
@@ -22,41 +20,12 @@ export default function Post({fileStructure, file, title}) {
       <main>
         <Frame fileStructure={fileStructure}>
           <Stack mt={6}>
-            {cells.map((el, i) => {
-              if(el.type === 'cell' && el.data.cell_type === 'markdown') {
-                return (
-                  <Stack key={i} sx={{maxWidth: '900px'}}>
-                    <IpynbRenderer
-                      ipynb={{cells: [el.data]}}
-                      syntaxTheme="ghcolors"
-                      language="python"
-                      bgTransparent={true}
-                      formulaOptions={{
-                        mathjax3: {
-                          tex: {
-                            tags: "ams"
-                          }
-                        }
-                      }}
-                      mdiOptions={{
-                        html: true
-                      }}
-                    />
-                  </Stack>
-                )
-              } else if (el.type === 'plotly') {
-                return (el.data.outputs.map((output, i) => {
-                  return (
-                    <Stack key={i} sx={{mb: '20px'}}>
-                      <PlotGraph
-                        data={output.data["application/vnd.plotly.v1+json"]?.data}
-                        layout={{ width: 800, height: 550, ...output.data["application/vnd.plotly.v1+json"]?.layout}}
-                      />
-                    </Stack>
-                  )
-                }))
-              }
-            })}
+            {cells.map((block, i) => (
+              <PostBlock 
+                key={`block_${i}`} 
+                block={block}
+              />
+            ))}
           </Stack>
         </Frame>
       </main>
