@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 export const useSideMenu = (fileStructure) => {
 
@@ -21,5 +21,29 @@ export const useSideMenu = (fileStructure) => {
     return deepCopy;
   }
 
-  return [files, handleOpen]
+  return [files, handleOpen];
+}
+
+export const usePosts = (fileStructure) => {
+
+  const [posts, setPosts] = useState([]);
+
+  const extractPosts = () => {
+    let memo = [];
+    const recursive = (arr) => {
+      if (arr.length === 0) return;
+      arr.forEach((el, i) => {
+        if (el.type === 'file') memo.push(el);
+        if (el.type === 'folder') recursive(el.dir);
+      })
+    }
+    recursive(fileStructure);
+    setPosts(memo);
+  }
+
+  useEffect(() => {
+    extractPosts();
+  }, [])
+  
+  return [posts];
 }
