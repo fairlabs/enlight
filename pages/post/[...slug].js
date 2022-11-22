@@ -3,10 +3,10 @@ import Head from 'next/head';
 import { IpynbRenderer } from "react-ipynb-renderer";
 import dynamic from 'next/dynamic';
 import Frame from 'src/components/layouts/Frame';
-import fs from 'fs';
-import path from 'path';
 import { useRouter } from 'next/router';
 import { Stack } from '@mui/material';
+import { makeFileStructure, makePaths } from 'src/utility/utility';
+import fs from 'fs';
 
 export default function Post({fileStructure, file, title}) {
 
@@ -101,38 +101,8 @@ export default function Post({fileStructure, file, title}) {
 }
 
 export const getStaticProps = async ({ params }) => {
-  const root = 'src/contents';
-  const makeFileStructure = (treePath) => {    
 
-    const node = fs.readdirSync(treePath);
-    if (node.length === 0) return [];
-    let nodeTree = [];
-
-    node.forEach((childNode, i) => {
-      const address = path.join(treePath, childNode);
-      const isDirectory = fs.lstatSync(address).isDirectory();
-      if (isDirectory) {
-        nodeTree.push({
-          name: childNode,
-          type: 'folder',
-          link: address,
-          dir: [],
-          open: true,
-        })
-        nodeTree[nodeTree.length-1].dir = makeFileStructure(address);
-      } else {
-        nodeTree.push({
-          name: childNode,
-          type: 'file',
-          link: address,
-        })
-      }
-    })
-
-    return nodeTree;
-  };
-
-  const fileStructure = makeFileStructure(root, []);
+  const fileStructure = makeFileStructure('src/contents');
   const jsonFile = params.slug.join('/');
   const file = fs.readFileSync(`src/contents/${jsonFile}`);
   const title = params.slug[params.slug.length -1].split('.json')[0];
@@ -148,28 +118,8 @@ export const getStaticProps = async ({ params }) => {
 
 export const getStaticPaths = async () => {
 
-  const root = 'src/contents';
   let arr = [];
-  
-  const makeFileStructure = (treePath, parentSlug) => {    
-
-    const node = fs.readdirSync(treePath);
-    if (node.length === 0) return;
-    
-    node.forEach((childNode, i) => {
-      const address = path.join(treePath, childNode);
-      const isDirectory = fs.lstatSync(address).isDirectory();
-      if (isDirectory) {
-        let slug = [...parentSlug];
-        slug.push(childNode)
-        makeFileStructure(address, slug);
-      } else {
-        arr.push({params: {'slug': [...parentSlug, childNode]}});
-      }
-    })
-  };
-
-  makeFileStructure(root, []);
+  makePaths('src/contents',[], arr);
  
 	return {
 		paths: arr,

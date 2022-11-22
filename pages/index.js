@@ -1,11 +1,10 @@
 import Head from 'next/head';
 import Frame from 'src/components/layouts/Frame';
-import fs from 'fs';
-import path from 'path';
 import Banner from 'src/components/Banner';
 import Card from 'src/components/Card';
 import { Stack, Grid, Typography, Pagination } from '@mui/material';
 import { useState, useEffect } from 'react';
+import { makeFileStructure } from 'src/utility/utility';
 
 export default function Home({fileStructure}) {
 
@@ -83,39 +82,7 @@ export default function Home({fileStructure}) {
 
 export const getStaticProps = async () => {
 
-  const root = 'src/contents';
-
-  const makeFileStructure = (treePath) => {    
-
-    const node = fs.readdirSync(treePath);
-    if (node.length === 0) return [];
-    let nodeTree = [];
-
-    node.forEach((childNode, i) => {
-      const address = path.join(treePath, childNode);
-      const isDirectory = fs.lstatSync(address).isDirectory();
-      if (isDirectory) {
-        nodeTree.push({
-          name: childNode,
-          type: 'folder',
-          link: address,
-          dir: [],
-          open: true,
-        })
-        nodeTree[nodeTree.length-1].dir = makeFileStructure(address);
-      } else {
-        nodeTree.push({
-          name: childNode,
-          type: 'file',
-          link: address,
-        })
-      }
-    })
-
-    return nodeTree;
-  };
-
-  const fileStructure = makeFileStructure(root, []);
+  const fileStructure = makeFileStructure('src/contents');
 
   return {
     props: {
