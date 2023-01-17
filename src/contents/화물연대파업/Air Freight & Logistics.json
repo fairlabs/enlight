@@ -150,7 +150,7 @@
   {
    "cell_type": "code",
    "execution_count": 292,
-   "id": "3845bc16",
+   "id": "bcc92421",
    "metadata": {
     "ExecuteTime": {
      "end_time": "2023-01-16T11:41:08.535585Z",
@@ -165,7 +165,7 @@
   {
    "cell_type": "code",
    "execution_count": 293,
-   "id": "9cffe108",
+   "id": "355c6986",
    "metadata": {
     "ExecuteTime": {
      "end_time": "2023-01-16T11:41:11.315056Z",
@@ -230,7 +230,7 @@
   {
    "cell_type": "code",
    "execution_count": 24,
-   "id": "75056aa6",
+   "id": "dadfa616",
    "metadata": {
     "ExecuteTime": {
      "end_time": "2023-01-16T03:05:29.466994Z",
@@ -273,7 +273,7 @@
   {
    "cell_type": "code",
    "execution_count": 297,
-   "id": "5f561de1",
+   "id": "f3a15cdb",
    "metadata": {
     "ExecuteTime": {
      "end_time": "2023-01-16T11:41:25.852190Z",
@@ -289,7 +289,7 @@
   {
    "cell_type": "code",
    "execution_count": 26,
-   "id": "fb8e6106",
+   "id": "9cd9564b",
    "metadata": {
     "ExecuteTime": {
      "end_time": "2023-01-16T03:05:30.377678Z",
@@ -304,7 +304,7 @@
   {
    "cell_type": "code",
    "execution_count": 298,
-   "id": "b0ee95db",
+   "id": "3c05f3e4",
    "metadata": {
     "ExecuteTime": {
      "end_time": "2023-01-16T11:41:29.192218Z",
@@ -319,7 +319,7 @@
   {
    "cell_type": "code",
    "execution_count": 28,
-   "id": "c87bf8c4",
+   "id": "54741374",
    "metadata": {
     "ExecuteTime": {
      "end_time": "2023-01-16T03:06:34.589969Z",
@@ -340,7 +340,7 @@
   {
    "cell_type": "code",
    "execution_count": 299,
-   "id": "170fd4a1",
+   "id": "5e704b01",
    "metadata": {
     "ExecuteTime": {
      "end_time": "2023-01-16T11:41:33.149508Z",
@@ -358,7 +358,7 @@
   {
    "cell_type": "code",
    "execution_count": 31,
-   "id": "9e73e2af",
+   "id": "6fb3ebb2",
    "metadata": {
     "ExecuteTime": {
      "end_time": "2023-01-16T03:06:38.310348Z",
@@ -373,7 +373,7 @@
   {
    "cell_type": "code",
    "execution_count": 164,
-   "id": "eb1ca04d",
+   "id": "dd749688",
    "metadata": {
     "ExecuteTime": {
      "end_time": "2023-01-16T03:33:31.722422Z",
@@ -388,7 +388,7 @@
   {
    "cell_type": "code",
    "execution_count": 301,
-   "id": "3f40d207",
+   "id": "cbb93c56",
    "metadata": {
     "ExecuteTime": {
      "end_time": "2023-01-16T11:41:43.278539Z",
@@ -407,7 +407,7 @@
   {
    "cell_type": "code",
    "execution_count": 165,
-   "id": "53fe43f2",
+   "id": "e0aeeb37",
    "metadata": {
     "ExecuteTime": {
      "end_time": "2023-01-16T03:33:36.676156Z",
@@ -425,7 +425,7 @@
   {
    "cell_type": "code",
    "execution_count": 302,
-   "id": "3fe9b736",
+   "id": "75c82cc1",
    "metadata": {
     "ExecuteTime": {
      "end_time": "2023-01-16T11:41:53.213324Z",
@@ -442,7 +442,7 @@
   {
    "cell_type": "code",
    "execution_count": 303,
-   "id": "42b7b89a",
+   "id": "3c21c466",
    "metadata": {
     "ExecuteTime": {
      "end_time": "2023-01-16T11:41:57.393452Z",
@@ -457,7 +457,7 @@
   {
    "cell_type": "code",
    "execution_count": 304,
-   "id": "600f4564",
+   "id": "1b5f03c4",
    "metadata": {
     "ExecuteTime": {
      "end_time": "2023-01-16T11:42:00.258629Z",
@@ -484,14 +484,14 @@
   {
    "cell_type": "code",
    "execution_count": null,
-   "id": "798e6d54",
+   "id": "b87938ef",
    "metadata": {},
    "outputs": [],
    "source": []
   },
   {
    "cell_type": "markdown",
-   "id": "89264778",
+   "id": "246c2634",
    "metadata": {},
    "source": [
     "# CJ대한통운의 단체교섭 재판과 ESG"
@@ -499,7 +499,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "b9260abb",
+   "id": "b31799d0",
    "metadata": {
     "ExecuteTime": {
      "end_time": "2023-01-16T05:37:56.806896Z",
@@ -521,7 +521,7 @@
   {
    "cell_type": "code",
    "execution_count": 282,
-   "id": "f05e73b7",
+   "id": "24201590",
    "metadata": {
     "ExecuteTime": {
      "end_time": "2023-01-16T08:04:00.451923Z",
@@ -756,7 +756,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "2af5e89f",
+   "id": "e1651966",
    "metadata": {},
    "source": [
     "ﾠﾠ위의 표를 보면, 아주 특이하게도 수송(Transportation) 섹터 내에서 오직 물류·운수(Air Freight & Logistics) 업계에서만 **'Labor Practices'** 이슈가 포함되어 있는 것을 볼 수가 있다. 이는 물류·운수 업계 특성상 독립적 하청 업체 직원들이 통상 법의 보호를 받지 못하는 경우가 많으며, 그에 따라 임금 문제 및 근무 환경에 대한 소송과 파업 등으로 인해 추후 기업들이 회사 평판, 직원 고용 문제, 업무 효율성 저하 등의 위험을 겪게 될 수 있다는 점을 경고하는 것이다. 그리고 해당 이슈는 직원들의 건강과 안전(Employee Health & Safety)에 대한 문제로도 이어질 수 있으며 나아가 공급망 이슈에까지 영향을 미칠 수 있다. 왜냐하면 기업들의 공급 및 생산 과정 속에서 노동 착취가 드러난다든지 열악한 근무환경으로 인한 폭발 및 화재 등의 사고나 파업 등으로 인해 공급에 차질이 생기는 경우도 있기 때문이다.<br>\n",
@@ -769,7 +769,7 @@
   {
    "cell_type": "code",
    "execution_count": 285,
-   "id": "0695d171",
+   "id": "cbf84e38",
    "metadata": {
     "ExecuteTime": {
      "end_time": "2023-01-16T08:29:13.386213Z",
@@ -822,7 +822,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "82ede60a",
+   "id": "55abc9a3",
    "metadata": {},
    "source": [
     "ﾠﾠ다음으로 기업이 노출되고 있는 위험에 대해 매일 생성되는 빅데이터를 AI로 분석한 결과를 보고자 한다. 현재 국내 기업 중 물류·운수 업계로 분류된 기업은 '현대글로비스', '태웅로직스', '선광', 'CJ대한통운'으로 총 4개가 있으며 그 중 우리가 분석하는 대상인 KOSPI 200 목록에 포함된 기업은 '현대글로비스'와 'CJ대한통운' 두 기업뿐이다. 두 기업들이 SASB에서 지정한 GIC에 대해 6년간(2017~2022) 부정적으로 노출된 누적 빈도에 대한 데이터는 다음과 같다."
@@ -831,7 +831,7 @@
   {
    "cell_type": "code",
    "execution_count": 289,
-   "id": "6e33c90f",
+   "id": "7c69db19",
    "metadata": {
     "ExecuteTime": {
      "end_time": "2023-01-16T08:36:20.763590Z",
@@ -951,7 +951,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "5021faee",
+   "id": "9ce61437",
    "metadata": {},
    "source": [
     "ﾠﾠ여타 업계와는 달리 유일하게 포함하고 있는 이슈인 'Labor Practices'가 58.19%로 6년간 가장 많이 노출되어 왔음을 알 수 있다. 그 다음으로는 'Supply Chain Management'가 37.45%를 차지했으며 'Employee Health & Saftey'는 4.36%를 차지했다. 그리고 아래 그래프는 위의 6년간 누적된 데이터가 아니라 각 이슈가 차지하는 해마다 각 산업 내에서 차지하는 비율을 연간 흐름으로 나타낸 것이다. 주목할만 한 부분은 2019년 이래로 'Labor Practices' 부문이 전체 이슈 중 40.35%에서 77.96%까지 급증했다는 점이다.\n",
@@ -962,7 +962,7 @@
   {
    "cell_type": "code",
    "execution_count": 290,
-   "id": "34a977df",
+   "id": "2e2df436",
    "metadata": {
     "ExecuteTime": {
      "end_time": "2023-01-16T11:13:39.850649Z",
@@ -2132,7 +2132,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "385ff0db",
+   "id": "aa124a36",
    "metadata": {},
    "source": [
     "ﾠﾠ기업들이 이제는 ESG와 관련해 협력업체까지도 면밀히 신경쓰고 있다. 왜냐하면 기업이 좋은 평가를 받는 데에는 그 기업의 협력업체들까지도 평가 대상에 들어가기 때문이다. 그러나 사내 정규직 근로자 외 하청노동자들에 대한 부분까지도 ESG 평가 부문에서 리스크로 포함될 수 있기 때문에 기업은 이전보다 신경써야할 부분이 더욱 많아졌다. 물론 현대글로비스나 CJ대한통운 모두 탄소배출 감축을 위해서 수소 물류체계 구축이나 전기차로의 전환 등 열심히 노력을 하고 있다. 그리고 앞으로 자율주행과 로봇 산업의 발달로 인해 탄소배출뿐만 아니라 근로자들의 근무 환경 등과 관련해서도 긍정적인 변화를 보여줄 수 있을 것으로 기대되는 가운데 미래에 어떤 기업들이 ESG라는 경영 환경 속에서 리스크를 최소화하며 시장점유율을 높일 수 있을지 눈여겨볼만 하다."
@@ -2140,7 +2140,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "88adf750",
+   "id": "a640d216",
    "metadata": {},
    "source": [
     "출처: \n",
