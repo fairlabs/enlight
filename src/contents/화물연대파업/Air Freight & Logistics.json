@@ -2,12 +2,12 @@
  "cells": [
   {
    "cell_type": "code",
-   "execution_count": 276,
+   "execution_count": 1,
    "id": "af497baf",
    "metadata": {
     "ExecuteTime": {
-     "end_time": "2023-01-16T08:02:21.911385Z",
-     "start_time": "2023-01-16T08:02:20.267998Z"
+     "end_time": "2023-01-17T06:11:28.579303Z",
+     "start_time": "2023-01-17T06:11:26.166035Z"
     }
    },
    "outputs": [
@@ -68,12 +68,12 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 8,
+   "execution_count": null,
    "id": "7d4086ad",
    "metadata": {
     "ExecuteTime": {
-     "end_time": "2023-01-16T03:00:15.822701Z",
-     "start_time": "2023-01-16T03:00:15.809710Z"
+     "end_time": "2023-01-17T06:11:28.663670Z",
+     "start_time": "2023-01-17T06:11:28.663660Z"
     }
    },
    "outputs": [],
@@ -132,12 +132,12 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 291,
+   "execution_count": null,
    "id": "7a1f18aa",
    "metadata": {
     "ExecuteTime": {
-     "end_time": "2023-01-16T11:41:05.609713Z",
-     "start_time": "2023-01-16T11:41:05.606720Z"
+     "end_time": "2023-01-17T06:11:28.666335Z",
+     "start_time": "2023-01-17T06:11:28.666325Z"
     }
    },
    "outputs": [],
@@ -149,12 +149,12 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 292,
+   "execution_count": null,
    "id": "bcc92421",
    "metadata": {
     "ExecuteTime": {
-     "end_time": "2023-01-16T11:41:08.535585Z",
-     "start_time": "2023-01-16T11:41:08.533013Z"
+     "end_time": "2023-01-17T06:11:28.669522Z",
+     "start_time": "2023-01-17T06:11:28.669508Z"
     }
    },
    "outputs": [],
@@ -164,12 +164,12 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 293,
+   "execution_count": null,
    "id": "355c6986",
    "metadata": {
     "ExecuteTime": {
-     "end_time": "2023-01-16T11:41:11.315056Z",
-     "start_time": "2023-01-16T11:41:11.312441Z"
+     "end_time": "2023-01-17T06:11:28.672421Z",
+     "start_time": "2023-01-17T06:11:28.672410Z"
     }
    },
    "outputs": [],
@@ -179,12 +179,12 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 294,
+   "execution_count": null,
    "id": "e6ea3654",
    "metadata": {
     "ExecuteTime": {
-     "end_time": "2023-01-16T11:41:14.751795Z",
-     "start_time": "2023-01-16T11:41:14.749185Z"
+     "end_time": "2023-01-17T06:11:28.674693Z",
+     "start_time": "2023-01-17T06:11:28.674681Z"
     }
    },
    "outputs": [],
@@ -196,12 +196,12 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 295,
+   "execution_count": null,
    "id": "c5c4ed58",
    "metadata": {
     "ExecuteTime": {
-     "end_time": "2023-01-16T11:41:19.121143Z",
-     "start_time": "2023-01-16T11:41:19.111012Z"
+     "end_time": "2023-01-17T06:11:28.677744Z",
+     "start_time": "2023-01-17T06:11:28.677729Z"
     }
    },
    "outputs": [],
@@ -214,12 +214,12 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 296,
+   "execution_count": 2,
    "id": "d294616a",
    "metadata": {
     "ExecuteTime": {
-     "end_time": "2023-01-16T11:41:21.463298Z",
-     "start_time": "2023-01-16T11:41:21.460688Z"
+     "end_time": "2023-01-17T06:11:30.150050Z",
+     "start_time": "2023-01-17T06:11:30.147637Z"
     }
    },
    "outputs": [],
@@ -229,12 +229,12 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 24,
+   "execution_count": 3,
    "id": "dadfa616",
    "metadata": {
     "ExecuteTime": {
-     "end_time": "2023-01-16T03:05:29.466994Z",
-     "start_time": "2023-01-16T03:05:29.461821Z"
+     "end_time": "2023-01-17T06:11:30.296948Z",
+     "start_time": "2023-01-17T06:11:30.291027Z"
     }
    },
    "outputs": [],
@@ -272,12 +272,12 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 297,
+   "execution_count": 4,
    "id": "f3a15cdb",
    "metadata": {
     "ExecuteTime": {
-     "end_time": "2023-01-16T11:41:25.852190Z",
-     "start_time": "2023-01-16T11:41:25.849761Z"
+     "end_time": "2023-01-17T06:11:31.193990Z",
+     "start_time": "2023-01-17T06:11:31.191643Z"
     }
    },
    "outputs": [],
@@ -956,7 +956,7 @@
    "source": [
     "ﾠﾠ여타 업계와는 달리 유일하게 포함하고 있는 이슈인 'Labor Practices'가 58.19%로 6년간 가장 많이 노출되어 왔음을 알 수 있다. 그 다음으로는 'Supply Chain Management'가 37.45%를 차지했으며 'Employee Health & Saftey'는 4.36%를 차지했다. 그리고 아래 그래프는 위의 6년간 누적된 데이터가 아니라 각 이슈가 차지하는 해마다 각 산업 내에서 차지하는 비율을 연간 흐름으로 나타낸 것이다. 주목할만 한 부분은 2019년 이래로 'Labor Practices' 부문이 전체 이슈 중 40.35%에서 77.96%까지 급증했다는 점이다.\n",
     "\n",
-    "ﾠﾠ아래 막대그래프는 실제로 발생한 이슈의 건을 나타낸 것인데, 'Supply Chain Management'가 2020년에 발생한 이슈의 건이 약 312건으로 전년대비 64%나 증가했음에도 'Labor Practices' 이슈의 건이 전년대비 약 151.3% 급증하는 등 압도적으로 'Labor Practices'이슈가 많이 발생했다. 심지어 'Labor Practices'는 2020년 이후로도 계속 증가하여 2022년에는 약 1141건으로 전년대비 약 83.7%가 증가했다. 이는 물류 업계에서 화제가 되었던 쿠팡의 정규직 전환 이슈와 더불어 COVID19 기간 중 물류 업계의 급성장 그리고 안전운임제와 관련한 지속적인 파업 속에서 해당 이슈가 폭발한 것이 아닌가 추측해볼 수 있다."
+    "ﾠﾠ아래 막대그래프는 실제로 발생한 위험 노출 정도를 나타낸 것인데, 'Supply Chain Management'에서 2020년에 발생한 위험 정도가 약 312점으로 전년대비 64%나 증가했음에도 'Labor Practices'부문 위험 노출이 전년대비 약 151.3% 급증하는 등 압도적으로 'Labor Practices'이슈가 많이 발생했다. 심지어 'Labor Practices'는 2020년 이후로도 계속 증가하여 2022년에는 약 1141점으로 전년대비 약 83.7%가 증가했다. 이는 물류 업계에서 화제가 되었던 쿠팡의 정규직 전환 이슈와 더불어 COVID19 기간 중 물류 업계의 급성장 그리고 안전운임제와 관련한 지속적인 파업 속에서 해당 이슈가 폭발한 것이 아닌가 추측해볼 수 있다."
    ]
   },
   {
@@ -2145,7 +2145,7 @@
    "source": [
     "출처:\n",
     "    \n",
-    "- CJ대한통운. (2022). CJ대한통운 2022 기후변화대응보고서. (https://www.cjlogistics.com/ko/sustainablity/report#none).<br>\n",
+    "- [CJ대한통운. (2022). CJ대한통운 2022 기후변화대응보고서.](https://www.cjlogistics.com/ko/sustainablity/report#none)<br>\n",
     "- 현대글로비스. (2022). 현대글로비스 2022년 지속가능경영보고서. (https://www.glovis.net/Kor/manage/contentsid/620/index.do).<br>\n",
     "- 택배노조 파업… 그들이 파업하는 핵심 이유. BBC NEWS 코리아. (2021.6.15). https://www.bbc.com/korean/news-57480480<br>\n",
     "- CJ대한통운 '부당노동행위' 1심 판결에 \"대법원 판례 배치…항소\". 서울경제. (2023.1.12). https://www.sedaily.com/NewsView/29KG46V9SM<br>\n",
@@ -2158,6 +2158,14 @@
     "- 한국산업안전보건공단. (2022.7.20). 「통계로 보는 2021년 산업재해」. https://www.kosha.or.kr/kosha/data/industrialDisasterStatistics.do?mode=view&articleNo=433710&article.offset=0&articleLimit=10<br>\n",
     "- 통계청. (2022.3.14). 전체 재해 현황 및 분석-업종별(산업별 중분류). https://kosis.kr/statHtml/statHtml.do?orgId=118&tblId=DT_11806_N000&conn_path=I3<br>"
    ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "6460a400",
+   "metadata": {},
+   "outputs": [],
+   "source": []
   }
  ],
  "metadata": {
